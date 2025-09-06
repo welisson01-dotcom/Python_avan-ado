@@ -214,9 +214,9 @@ def ex17():
     print(f"Quantidade de latas: {latas_mistas}, Quantidade de galões: {galoes_mistos}, Custo total: R$ {custo_misto}")
 
 def ex18():
+
     """Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps), 
     calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos)."""
-    
     tamanho_arquivo_mb = float(input("Digite o tamanho do arquivo para download (em MB): "))
     velocidade_link_mbps = float(input("Digite a velocidade do link de Internet (em Mbps): "))
     tamanho_arquivo_megabits = tamanho_arquivo_mb * 8  # converte MB para Megabits
@@ -225,11 +225,14 @@ def ex18():
     print(f"O tempo aproximado de download do arquivo é: {tempo_download_minutos:.2f} minutos")
 
 if __name__ == "__main__":
-   
-    
-    
-   
-    
-    ex17()
-    ex18()
+    exercicios = [
+        ex01, ex02, ex03, ex04, ex05, ex06, ex07, ex08,
+        ex09, ex10, ex11, ex12, ex13, ex14, ex15, ex16,
+        ex17, ex18
+    ]   
+    exercicio = int(input("Digite o número do exercício que deseja executar (1-18): "))
+    if 1 <= exercicio <= len(exercicios):
+        exercicios[exercicio - 1]()
+    else:
+        print("Número de exercício inválido. Por favor, digite um número entre 1 e 18.")
 
